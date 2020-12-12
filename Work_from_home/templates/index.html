@@ -1,192 +1,523 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="nav.css" />
-    <link rel="stylesheet" href="menu.css" />
-    <link rel="stylesheet" href="task.css" />
-    <link rel="stylesheet" href="homepage.css" />
-    <!--  -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <div class="nav">
-      <p class="nav_name">wfh app</p>
-      <button class="nav_logout">Log Out</button>
-    </div>
 
-    <div class="homepage">
-      <div class="homepage_menu">
-        <div class="menu_item menu_item--active">
-          <i class="material-icons">dashboard</i>
-          <h5>DASHBOARD</h5>
-        </div>
-        <div class="menu_item">
-          <i class="material-icons">schedule</i>
-          <h5>SCHEDULER</h5>
-        </div>
-        <div class="menu_item">
-          <i class="fas fa-tag"></i>
-          <h5>TAGS</h5>
-        </div>
-        <div class="menu_item">
-          <div
-            style="
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link rel="stylesheet" type="text/css" href="nav.css" />
+  <link rel="stylesheet" type="text/css" href="menu.css" />
+  <link rel="stylesheet" type="text/css" href="task.css" />
+  <link rel="stylesheet" type="text/css" href="homepage.css" />
+  <!--  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <style>
+    body {
+      background: #f7f7f7;
+      height: 98vh;
+      margin: 0;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* side menu */
+    .homepage {
+      /* margin: 10px; */
+      display: flex;
+      height: 100%;
+    }
+
+    /* Header bar styles */
+    .nav {
+      width: 100%;
+      height: fit-content;
+      /* Main Black */
+      background: #000000;
+      /* Drop Shadow */
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+      /* Align items */
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav_name {
+      position: relative;
+      top: 0%;
+      bottom: 0%;
+      margin: 15px;
+      margin-left: 2%;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28.4444px;
+      line-height: 35px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.015em;
+
+      color: #ffffff;
+    }
+
+    .nav_logout {
+      /* Main Purple */
+      background: #6e5fd9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      width: 10%;
+      margin-right: 5%;
+
+      /* border */
+      border-radius: 6px;
+      border: none;
+
+      /* font and text styles*/
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: -0.015em;
+      color: #ffffff;
+    }
+
+    .homepage_menu {
+      width: 15%;
+      height: 100%;
+      border: 1px solid black;
+      /* Nav Colour */
+      background: #ffffff;
+      /* Drop Shadow */
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu_item {
+      /* border: 1px solid black; */
+      margin-left: 10%;
+      margin-top: 10px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 15px;
+
+      /* Main Black */
+      color: #b0b0b0;
+
+      display: flex;
+      align-items: center;
+      padding: 2px;
+    }
+
+    .menu_item>i {
+      margin-right: 15px;
+    }
+
+    .menu_item--active {
+      color: black;
+    }
+
+    /* Tasks display */
+    .main_task {
+      width: 100%;
+      margin-top: 25px;
+      border: 1px solid black;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .task_week,
+    .task_break {
+      flex: 0.28;
+      background: #ffffff;
+      /* Drop Shadow */
+
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+      border-radius: 7px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+
+      /* Main Black */
+
+      color: #000000;
+    }
+
+    .task--active {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 15px;
+
+      /* Main Purple */
+      color: #6e5fd9;
+
+      border: 1px solid !important;
+      border-image-source: linear-gradient(to left,
+          rgba(110, 96, 217, 1) rgba(104, 110, 219, 1) rgba(75, 178, 226, 1)) !important;
+    }
+
+    .task_week>.task {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 30px 0 30px;
+      height: fit-content;
+
+      /* Main Black */
+      height: 50px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .task_week>h3,
+    .task_break>h3,
+    .task_today>h3 {
+      margin-left: 30px;
+    }
+
+    /*  */
+    .task_break>.task {
+      display: flex;
+      align-items: center;
+      /* justify-content: space-evenly; */
+      margin: 10px 30px 0 30px;
+      height: fit-content;
+
+      /* Main Black */
+      height: 50px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      font-size: small;
+      border-radius: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .task_break>.task>p {
+      text-align: left;
+      margin-left: 30px;
+    }
+
+    /*  */
+    .task_today {
+      flex: 0.38;
+      background: #ffffff;
+      /* Drop Shadow */
+
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+      border-radius: 7px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+
+      /* Main Black */
+
+      color: #000000;
+    }
+
+    .task_today>.task {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px 30px 0 30px;
+      height: fit-content;
+
+      /* Main Black */
+      height: 50px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 7px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .task_today>.task>.task_complete {
+      /* Main Black */
+      width: 23px;
+      height: 23px;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 100%;
+    }
+
+    .task_today>.task>.task_complete:hover {
+      border: 1px solid #b3bef5 !important;
+    }
+
+    .task_today>.task--checked {
+      opacity: 0.5;
+    }
+
+    .task_today>.task--checked>.task_complete--checked {
+      border: 1px solid #b3bef5;
+    }
+
+    /* ------------------------------------------ */
+    /* homepage */
+    .homepage_main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 30px;
+      margin-top: 0;
+    }
+
+    .main_header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header_welcome {
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 33px;
+
+      /* Main Black */
+
+      color: #000000;
+    }
+
+    .header_timer {
+      background: #000000;
+      border-radius: 6px;
+      height: 50%;
+      width: 10%;
+      margin-right: 30px;
+      padding: 10px;
+
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: space-between;
+      letter-spacing: -0.015em;
+
+      color: #ffffff;
+    }
+
+    .main_timer {
+      margin-top: 15px;
+      /* Main Gradient */
+      background: linear-gradient(90.76deg,
+          #6e60d9 0.1%,
+          #686edb 49.73%,
+          #4bb2e2 99.35%);
+      /* Drop Shadow */
+
+      box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+      border-radius: 7px;
+
+      display: flex;
+      justify-content: space-evenly;
+      /* padding: 20px; */
+    }
+
+    .time {
+      font-family: Montserrat;
+      font-style: normal;
+      text-align: center;
+      color: #ffffff;
+    }
+  </style>
+  <script src="index.js"></script>
+</head>
+<body>
+  <div class="nav">
+    <p class="nav_name">wfh app</p>
+    <button class="nav_logout">Log Out</button>
+  </div>
+
+  <div class="homepage">
+    <div class="homepage_menu">
+      <div class="menu_item menu_item--active">
+        <i class="material-icons">dashboard</i>
+        <h5>DASHBOARD</h5>
+      </div>
+      <div class="menu_item">
+        <i class="material-icons">schedule</i>
+        <h5>SCHEDULER</h5>
+      </div>
+      <div class="menu_item">
+        <i class="fas fa-tag"></i>
+        <h5>TAGS</h5>
+      </div>
+      <div class="menu_item">
+        <div style="
               width: 19px;
               height: 19px;
               background: #ee90a1;
               border-radius: 7px;
               transform: matrix(-1, 0, 0, 1, 0, 0);
               margin-right: 15px;
-            "
-          ></div>
-          <h5>High Priority</h5>
-        </div>
-        <div class="menu_item">
-          <div
-            style="
+            "></div>
+        <h5>High Priority</h5>
+      </div>
+      <div class="menu_item">
+        <div style="
               width: 19px;
               height: 19px;
               background: #72b7df;
               border-radius: 7px;
               transform: matrix(-1, 0, 0, 1, 0, 0);
               margin-right: 15px;
-            "
-          ></div>
-          <h5>Medium Priority</h5>
-        </div>
-        <div class="menu_item">
-          <div
-            style="
+            "></div>
+        <h5>Medium Priority</h5>
+      </div>
+      <div class="menu_item">
+        <div style="
               width: 19px;
               height: 19px;
               background: #5acdaa;
               border-radius: 7px;
               transform: matrix(-1, 0, 0, 1, 0, 0);
               margin-right: 15px;
-            "
-          ></div>
-          <h5>Low Priority</h5>
-        </div>
-        <div class="menu_item">
-          <img src="" alt="" />
-          <h5>SETTINGS</h5>
-        </div>
+            "></div>
+        <h5>Low Priority</h5>
       </div>
+      <div class="menu_item">
+        <img src="" alt="" />
+        <h5>SETTINGS</h5>
+      </div>
+    </div>
 
-      <div class="homepage_main">
-        <div class="main_header">
-          <h1 class="header_welcome">Hello John! Welcome back</h1>
-          <button class="header_timer">
-            Start Timer <i class="fas fa-play"></i>
-          </button>
-        </div>
-        <!--  -->
-        <div class="main_timer">
-          <div class="time">
-            <h1>7:30</h1>
-            <p>Work Hours Remaining</p>
-          </div>
-          <!--  -->
-          <div class="time">
-            <h1>00:30</h1>
-            <p>Work Hours Elasped</p>
-          </div>
-          <!--  -->
-          <div class="time">
-            <h1>10</h1>
-            <p>Breaks Left</p>
-          </div>
-          <!--  -->
-          <div class="time">
-            <h1>3:00</h1>
-            <p>Until Next Break</p>
-          </div>
-        </div>
-
-        <div class="main_task">
-          <div class="task_week">
-            <h3>Weekly Tasks Overview</h3>
-            <div class="task task--active">
-              <p>Mon</p>
-              <h5>4 Tasks</h5>
-            </div>
-            <div class="task">
-              <p>TUES</p>
-              <h5>1 Tasks</h5>
-            </div>
-            <div class="task">
-              <p>WEDS</p>
-              <h5>0 Tasks</h5>
-            </div>
-            <div class="task">
-              <p>THURS</p>
-              <h5>0 Tasks</h5>
-            </div>
-            <div class="task">
-              <p>FRI</p>
-              <h5>0 Tasks</h5>
-            </div>
-          </div>
-          <!--  -->
-          <div class="task_today">
-            <h3>Today's Tasks</h3>
-            <div class="task">
-              <div class="task_complete"></div>
-              <div>
-                <p>Complete pitch deck design for Microsoft</p>
-                <div></div>
-              </div>
-            </div>
-            <!--  -->
-            <div class="task">
-              <div class="task_complete"></div>
-              <div>
-                <p>Complete pitch deck design for Microsoft</p>
-                <div></div>
-              </div>
-            </div>
-            <!--  -->
-            <div class="task task--checked">
-              <div class="task_complete task_complete--checked"></div>
-              <div>
-                <p>Complete pitch deck design for Microsoft</p>
-                <div class="task_underline task_complete--checked"></div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
-          <div class="task_break">
-            <h3>Breaks</h3>
-            <div class="task">
-              <p>10 mins</p>
-              <p>Snack Break</p>
-            </div>
-            <!--  -->
-            <div class="task">
-              <p>5 mins</p>
-              <p>Stand Up</p>
-            </div>
-            <!--  -->
-            <div class="task">
-              <p>5 mins</p>
-              <p>Check Social Media</p>
-            </div>
-            <!--  -->
-            <div class="task">
-              <p>5 mins</p>
-              <p>Check on Dog</p>
-            </div>
-          </div>
-        </div>
+    <div class="homepage_main">
+      <div class="main_header">
+       <form method = "post" action = "/user">
+            {% csrf_token %}
+        <h1 class="header_welcome">Hello John!{{name}} Welcome back</h1>
+        </form>
+        <button class="header_timer">
+          Start Timer <i class="fas fa-play"></i>
+        </button>
       </div>
       <!--  -->
+      <div class="main_timer">
+        <div class="time">
+          <h1>7:30</h1>
+          <p>Work Hours Remaining</p>
+        </div>
+        <!--  -->
+        <div class="time">
+          <h1>00:30</h1>
+          <p>Work Hours Elasped</p>
+        </div>
+        <!--  -->
+        <div class="time">
+          <h1>10</h1>
+          <p>Breaks Left</p>
+        </div>
+        <!--  -->
+        <div class="time">
+          <h1>3:00</h1>
+          <p>Until Next Break</p>
+        </div>
+      </div>
+
+      <div class="main_task">
+        <div class="task_week">
+          <h3>Weekly Tasks Overview</h3>
+          <div class="task task--active">
+            <p>Mon</p>
+            <h5>4 Tasks</h5>
+          </div>
+          <div class="task">
+            <p>TUES</p>
+            <h5>1 Tasks</h5>
+          </div>
+          <div class="task">
+            <p>WEDS</p>
+            <h5>0 Tasks</h5>
+          </div>
+          <div class="task">
+            <p>THURS</p>
+            <h5>0 Tasks</h5>
+          </div>
+          <div class="task">
+            <p>FRI</p>
+            <h5>0 Tasks</h5>
+          </div>
+        </div>
+        <!--  -->
+        <div class="task_today">
+          <h3>Today's Tasks</h3>
+          <div class="task">
+            <div class="task_complete"></div>
+            <div>
+              <p>Complete pitch deck design for Microsoft</p>
+              <div></div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="task">
+            <div class="task_complete"></div>
+            <div>
+              <p>Complete pitch deck design for Microsoft</p>
+              <div></div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="task task--checked">
+            <div class="task_complete task_complete--checked"></div>
+            <div>
+              <p>Complete pitch deck design for Microsoft</p>
+              <div class="task_underline task_complete--checked"></div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="task_break">
+          <h3>Breaks</h3>
+          <div class="task">
+            <p>10 mins</p>
+            <p>Snack Break</p>
+          </div>
+          <!--  -->
+          <div class="task">
+            <p>5 mins</p>
+            <p>Stand Up</p>
+          </div>
+          <!--  -->
+          <div class="task">
+            <p>5 mins</p>
+            <p>Check Social Media</p>
+          </div>
+          <!--  -->
+          <div class="task">
+            <p>5 mins</p>
+            <p>Check on Dog</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+    <!--  -->
+  </div>
+</body>
+
 </html>
