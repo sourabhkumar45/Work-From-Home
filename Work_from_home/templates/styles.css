@@ -1,0 +1,161 @@
+body{
+    margin: 0%;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    height:80px;
+    width:100%;
+}
+nav
+{
+    background-color: black;
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    box-sizing: border-box;
+    position: fixed;
+}
+#logo
+{
+    width: 50px;
+}
+
+#logout-button
+{
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background: #6E5FD9;
+    padding: 9px 34px;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.sidebar
+{
+    width:15vw;
+    background: #FFFFFF;
+    border-right:  black;
+    margin:0%;
+    height: 91.7vh;
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+    margin:0;
+    padding-left:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container
+{
+    width:15vw;
+    height: auto;
+}
+.side-item
+{
+    padding:20px;
+    text-align: center;
+}
+#dash-icon
+{
+    position: relative;
+    top:5px;
+    margin-right:25px;
+}
+.side-item:hover
+{
+    box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+}
+#tag-icon
+{
+    position: relative;
+    top:5px;
+    right:40px;
+}
+.tags
+{
+    position:relative;
+    right:10px;
+}
+#schedule-icon
+{
+    position: relative;
+    top:5px;
+    right:20px;
+}
+.schedule
+{
+    position:relative;
+    right:-10px;
+}
+#high_button
+{
+     background-color: #EE90A1;;
+     border:none;
+     border-radius:40%;
+     width:1vw;
+     height:2vh;
+     position: relative;
+     right:13px;
+}
+.high_priority
+{
+    position: relative;
+    left: 15px;
+}
+#medium_button
+{
+     background-color: #72B7DF;
+     border:none;
+     border-radius:40%;
+     width:1vw;
+     height:2vh;
+     position: relative;
+     right:-4px;
+}
+.medium_priority
+{
+    position: relative;
+    left: 30px;
+}
+#low_button
+{
+     background-color: #5ACDAA;
+     border:none;
+     border-radius:40%;
+     width:1vw;
+     height:2vh;
+     position: relative;
+     right:12px;
+}
+.low_priority
+{
+    position: relative;
+    left: 11px;
+}
+#setting-icon
+{
+    position: relative;
+    right: 25px;
+    top:5px;
+}
+.settings
+{
+    position: relative;
+    left: 11px;
+}
+.welcome-note
+{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 33px;
+    position: relative;
+    top:1px;
+    left:50px; 
+    background-color: red;
+}
