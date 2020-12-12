@@ -1,0 +1,137 @@
+/* Tasks display */
+.main_task {
+  width: 100%;
+  margin-top: 25px;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.task_week,
+.task_break {
+  flex: 0.28;
+  background: #ffffff;
+  /* Drop Shadow */
+
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+
+  /* Main Black */
+
+  color: #000000;
+}
+.task--active {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 15px;
+
+  /* Main Purple */
+  color: #6e5fd9;
+
+  border: 1px solid !important;
+  border-image-source: linear-gradient(
+    to left,
+    rgba(110, 96, 217, 1) rgba(104, 110, 219, 1) rgba(75, 178, 226, 1)
+  ) !important;
+}
+.task_week > .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 30px 0 30px;
+  height: fit-content;
+
+  /* Main Black */
+  height: 50px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.task_week > h3,
+.task_break > h3,
+.task_today > h3 {
+  margin-left: 30px;
+}
+
+/*  */
+.task_break > .task {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  margin: 10px 30px 0 30px;
+  height: fit-content;
+
+  /* Main Black */
+  height: 50px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-size: small;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.task_break > .task > p {
+  text-align: left;
+  margin-left: 30px;
+}
+/*  */
+.task_today {
+  flex: 0.38;
+  background: #ffffff;
+  /* Drop Shadow */
+
+  box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+
+  /* Main Black */
+
+  color: #000000;
+}
+.task_today > .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 30px 0 30px;
+  height: fit-content;
+
+  /* Main Black */
+  height: 50px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.task_today > .task > .task_complete {
+  /* Main Black */
+  width: 23px;
+  height: 23px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 100%;
+}
+.task_today > .task > .task_complete:hover {
+  border: 1px solid #b3bef5 !important;
+}
+.task_today > .task--checked {
+  opacity: 0.5;
+}
+.task_today > .task--checked > .task_complete--checked {
+  border: 1px solid #b3bef5;
+}
