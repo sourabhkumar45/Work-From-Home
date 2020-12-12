@@ -1,4 +1,6 @@
 .homepage_menu {
+  /* width: 200px; */
+  /* min-width: 200px; */
   width: 15%;
   height: 100%;
   border: 1px solid black;
@@ -26,6 +28,7 @@
   display: flex;
   align-items: center;
   padding: 2px;
+  cursor: pointer;
 }
 .menu_item > i {
   margin-right: 15px;

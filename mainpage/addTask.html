@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="modal-content">
+      <span class="close" id="task_close">&minus;</span>
+      <p>New Task</p>
+
+      <form>
+        <label for="#taskName">Task Name</label>
+        <textarea
+          name=""
+          id="taskName"
+          cols="30"
+          rows="3"
+          placeholder="Reading 10 pages of a book"
+        ></textarea>
+
+        <label for="#dueDate">Priority</label>
+        <div class="prior">
+          <div class="prior_item">
+            <div class="circle" style="background: #ee90a1"></div>
+            <h5>High</h5>
+          </div>
+          <div class="prior_item">
+            <div class="circle" style="background: #72b7df"></div>
+            <h5>Medium</h5>
+          </div>
+          <div class="prior_item">
+            <div class="circle" style="background: #5acdaa"></div>
+            <h5>Low</h5>
+          </div>
+        </div>
+
+        <label for="#dueDate">Due Date</label>
+        <textarea
+          name=""
+          id="dueDate"
+          cols="30"
+          rows="1"
+          placeholder="Dec 1"
+        ></textarea>
+      </form>
+    </div>
+  </body>
+</html>

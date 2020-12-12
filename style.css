@@ -2,10 +2,11 @@ body {
   background: #f7f7f7;
   height: 98vh;
   margin: 0;
+  overflow: hidden;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 /* side menu */
 .homepage {
