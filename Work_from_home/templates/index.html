@@ -16,6 +16,7 @@
       background: #f7f7f7;
       height: 98vh;
       margin: 0;
+      font-family: Montserrat;
     }
 
     body::-webkit-scrollbar {
@@ -346,7 +347,7 @@
       color: #ffffff;
     }
   </style>
-  <script src="index.js"></script>
+  
 </head>
 <body>
   <div class="nav">
@@ -410,8 +411,8 @@
     <div class="homepage_main">
       <div class="main_header">
        <form method = "post" action = "/user">
-            {% csrf_token %}
-        <h1 class="header_welcome">Hello John!{{name}} Welcome back</h1>
+          {% csrf_token %}
+        <h1 class="header_welcome">Hello {{name}}! Welcome</h1>
         </form>
         <button class="header_timer">
           Start Timer <i class="fas fa-play"></i>
@@ -420,12 +421,12 @@
       <!--  -->
       <div class="main_timer">
         <div class="time">
-          <h1>7:30</h1>
+          <h1 class="real_time">00:00</h1>
           <p>Work Hours Remaining</p>
         </div>
         <!--  -->
         <div class="time">
-          <h1>00:30</h1>
+          <h1 >00:00</h1>
           <p>Work Hours Elasped</p>
         </div>
         <!--  -->
@@ -435,7 +436,7 @@
         </div>
         <!--  -->
         <div class="time">
-          <h1>3:00</h1>
+          <h1>24:00</h1>
           <p>Until Next Break</p>
         </div>
       </div>
@@ -519,5 +520,24 @@
     <!--  -->
   </div>
 </body>
+<script>
+'use strict';
+const start_button = document.querySelector('.header_timer');
+const time = document.querySelector('.real_time');
 
+var countDownDate = new Date("Dec 12, 2021 19:37:25").getTime()
+var x = setInterval(function(){
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  time.innerHTML = String(hours) +":" + String(minutes) + ":" + String(seconds);
+  if (distance < 0) 
+    clearInterval(x);
+  } , 1000);
+start_button.addEventListener('click', function(){
+   x()
+})
+</script>
 </html>

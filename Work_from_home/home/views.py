@@ -1,10 +1,10 @@
 from django.shortcuts import render, HttpResponse
-
+from home.models import user
 # Create your views here.
 def index(request):
-    obj = user.objects.get(id=2)
+    User = user.objects.get(id=1)
     context = {
-        'name': obj.name
+        'name':User.name
     }
-    return render(request, 'index.html',context)
+    return render(request, 'index.html', context)
     
