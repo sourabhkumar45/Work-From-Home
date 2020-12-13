@@ -1,4 +1,4 @@
-Home - Start Timer
+/*Home - Start Timer
 
 This is the dashboard for the web app. Here users can view their weekly tasks (number of). This should be updated as tasks are added to the scheduler.
 
@@ -25,4 +25,4 @@ Reminder - ON
 This is a screen that will cover the entire web app when a "break" is scheduled even if they are not on the main dashboard. It also pauses the main timer.
 
 Reminder - OFF
-Users will be able to close the screen when break time is over. The total timer will start running again OR the user has to press run timer again. (Up to you guys)
+Users will be able to close the screen when break time is over. The total timer will start running again OR the user has to press run timer again. (Up to you guys)*/
