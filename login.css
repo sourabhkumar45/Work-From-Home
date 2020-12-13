@@ -25,13 +25,10 @@ body {
 }
 
 body::before {
-  content: url(https://images.unsplash.com/photo-1579792712597-2589cb380d5c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
   display: block;
   position: absolute;
   opacity: 0.4;
   filter: brightness(3);
-  overflow-x: hidden;
-  overflow-y: hidden;
   z-index: -1;
   top: 0;
   left: 0;
@@ -42,7 +39,6 @@ body::before {
 .wrapper {
   background: white;
   width: 20rem;
-  /* height: 100%; */
   padding: 2rem;
   border-radius: var(--radius);
   margin: 6rem auto;
@@ -96,7 +92,7 @@ body::before {
 
 .btn-primary {
   border: none;
-  background: #6e5fd9;
+  background: var(--clr-primary);
   color: white;
   border-radius: var(--radius);
   padding: var(--padding);

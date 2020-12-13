@@ -7,7 +7,7 @@
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -15,7 +15,7 @@
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 12% auto; /* 15% from the top and centered */
   padding: 34px 20px;
   border: 1px solid #888;
   width: 35%; /* Could be more or less, depending on screen size */
@@ -68,7 +68,7 @@ label {
 }
 textarea,
 select,
-option {
+input {
   /* height: 50px; */
   padding: 10px;
   background: #ffffff;
@@ -123,12 +123,23 @@ option {
 }
 
 .add_task_saveBtn,
-.add_break_saveBtn {
-  margin: 20px auto;
+.add_break_saveBtn,
+.setTimeBtn {
+  /* float: right; */
+  /* margin-right: 0;
+  margin-left: auto; */
+  margin: auto;
   height: 30px;
   width: 25%;
   background: #6e5fd9;
   border-radius: 6px;
   color: white;
   border: none;
+}
+
+.container {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

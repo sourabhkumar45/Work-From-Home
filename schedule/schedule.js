@@ -1,9 +1,10 @@
 var existCondition = setInterval(function () {
   if ($("#schedule_body").length) {
     clearInterval(existCondition);
+    clearInterval(existCondition);
     let body = document.getElementById("schedule_body");
 
-    console.log(body);
+    // console.log(body);
     for (i = 0; i < 35; i++) {
       let box = document.createElement("div");
       box.className = "box";
