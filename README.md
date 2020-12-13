@@ -5,7 +5,7 @@ Our team was determined to challenge a major problem of COVID-19, which is lack 
 Our platform allows users to keep track of their work hours, tasks, and schedule reminders to take breaks throughout the day. Home Savvy provides breaks from one's work routine that can easily be scheduled with a click of a button. Users can set breaks for just about anything. Whether that be virtual “water cooler” breaks with your coworkers, petting your dog for 3 minutes or even just a reminder to go eat lunch somewhere other than in front of your computer, Home Savvy encourages you to do things that will improve your mental health and make it easier for you to adjust. 
 
 # How we built it
-We built it using plain HTML/CSS and Javascript for frontend and Django for backend.
+We built it using plain HTML/CSS and Javascript.
 
 # Challenges we ran into
 Figuring out how to use and integrate these technologies was the biggest challenge. Since our team was not familiar with React using plain HTML/CSS and JavaScript was a little bit time-consuming. Some of the documentation was also hard to follow, and because of the libraries being a little unstable/buggy, we faced a lot of errors and problems.
