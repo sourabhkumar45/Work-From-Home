@@ -25,7 +25,7 @@ body {
 }
 
 body::before {
-  /* content: url(""https://images.unsplash.com/photo-1579792712597-2589cb380d5c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ""); */
+  content: url(""https://images.unsplash.com/photo-1579792712597-2589cb380d5c?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"");
   display: block;
   position: absolute;
   opacity: 0.4;
@@ -41,7 +41,6 @@ body::before {
 
 .wrapper {
   background: white;
-  background-image: url("bg.png");
   width: 20rem;
   /* height: 100%; */
   padding: 2rem;
