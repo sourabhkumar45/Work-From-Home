@@ -121,3 +121,14 @@ option {
   color: white;
   border: none;
 }
+
+.add_task_saveBtn,
+.add_break_saveBtn {
+  margin: 20px auto;
+  height: 30px;
+  width: 25%;
+  background: #6e5fd9;
+  border-radius: 6px;
+  color: white;
+  border: none;
+}

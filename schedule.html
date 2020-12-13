@@ -2,14 +2,14 @@
 <html>
   <head>
     <title>Page Title</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="nav_bar/nav.css" />
     <link rel="stylesheet" href="menu/menu.css" />
     <link rel="stylesheet" href="mainpage/task.css" />
     <link rel="stylesheet" href="mainpage/addTask.css" />
 
-    <link rel="stylesheet" href="mainpage/homepage.css" />
+    <link rel="stylesheet" href="mainpage/homepage.css" /> -->
     <link rel="stylesheet" href="schedule/schedule.css" />
 
     <!--  -->
@@ -19,15 +19,26 @@
     />
   </head>
   <body>
-    <div w3-include-html="../nav_bar/nav_bar.html" class="nav"></div>
-
-    <div class="homepage">
-      <div w3-include-html="../menu/menu.html" class="homepage_menu"></div>
-      <div class="schedule"></div>
+    <div class="schedule_header">
+      <h2>December 20</h2>
+      <div class="option">
+        <div class="option_item option--active">Week</div>
+        <div class="option_item">Month</div>
+      </div>
     </div>
+
+    <main class="schedule_body" id="schedule_body">
+      <p>MON</p>
+      <p>TUES</p>
+      <p>WEDS</p>
+      <p>THURS</p>
+      <p>FRI</p>
+      <p>SAT</p>
+      <p>SUN</p>
+    </main>
 
     <!--  -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../includeHTML.js"></script>
+    <script src="schedule/schedule.js"></script>
   </body>
 </html>

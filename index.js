@@ -3,7 +3,63 @@ window.onload = function () {
   breakModal();
   editBreak();
   timer();
+  menuClick();
+
+  $(document).on("click", ".main_task .task_week .task", function () {
+    $(this).addClass("task--active").siblings().removeClass("task--active ");
+  });
+
+  $(document).on("click", ".main_task .task_today .task", function () {
+    $(this).toggleClass("task--checked");
+  });
+
+  $(document).on("click", ".menu_item", function () {
+    $(this)
+      .addClass("menu_item--active")
+      .siblings()
+      .removeClass("menu_item--active");
+  });
+
+  $(document).on(
+    "click",
+    ".schedule .schedule_header .option .option_item",
+    function () {
+      $(this)
+        .addClass("option--active")
+        .siblings()
+        .removeClass("option--active");
+    }
+  );
 };
+
+function menuClick() {
+  var existCondition = setInterval(function () {
+    if ($("#dashboardBtn").length) {
+      clearInterval(existCondition);
+      let dbBtn = document.getElementById("dashboardBtn");
+
+      console.log("dashboard button >>>", dbBtn);
+
+      let scheduleBtn = document.getElementById("scheduleBtn");
+      console.log("Schedule button >>>", scheduleBtn);
+
+      let dashboard = document.getElementById("dashboard");
+      console.log("dashboard >>>", dashboard);
+
+      let schedule = document.getElementById("schedule");
+
+      dbBtn.onclick = function () {
+        dashboard.style.display = "block";
+        schedule.style.display = "none";
+      };
+      scheduleBtn.onclick = function () {
+        dashboard.style.display = "none";
+        schedule.style.display = "block";
+        console.log("Clicked");
+      };
+    }
+  }, 100);
+}
 
 function timer() {
   var existCondition = setInterval(function () {

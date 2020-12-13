@@ -1,6 +1,11 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Savvy</title>
+    <link rel="stylesheet" type="text/css" href="login.css" />
+
     <title>Page Title</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -20,50 +25,19 @@
     />
   </head>
   <body>
-    <div w3-include-html="nav_bar/nav_bar.html" class="nav"></div>
-
-    <div class="homepage">
-      <div w3-include-html="menu/menu.html" class="homepage_menu"></div>
-      <div w3-include-html="mainpage/mainpage.html" class="homepage_main"></div>
-      <div
-        w3-include-html="mainpage/addTask.html"
-        class="modal"
-        id="taskModal"
-      ></div>
-      <div
-        w3-include-html="mainpage/addBreak.html"
-        class="modal"
-        id="breakModal"
-      ></div>
-      <div
-        w3-include-html="mainpage/editBreak.html"
-        class="modal"
-        id="breakDetail"
-      ></div>
+    <div class="wrapper">
+      <h1 class="title">Login</h1>
+      <p class="description">Welcome back! Login to access wfh app.</p>
+      <div class="form-group">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-input" placeholder="Enter your name" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-input" placeholder="Enter your email" />
+      </div>
+      <a href="homeSavvy.html"><button class="btn-primary">Submit</button></a>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="includeHTML.js"></script>
-
-    <script type="text/javascript">
-      $(document).on("click", ".main_task .task_week .task", function () {
-        $(this)
-          .addClass("task--active")
-          .siblings()
-          .removeClass("task--active ");
-      });
-      $(document).on("click", ".main_task .task_today .task", function () {
-        $(this).toggleClass("task--checked");
-      });
-      $(document).on("click", ".menu_item", function () {
-        $(this)
-          .addClass("menu_item--active")
-          .siblings()
-          .removeClass("menu_item--active");
-      });
-    </script>
-
-    <script src="mainpage/task.js"></script>
-    <script src="index.js"></script>
+    <!--end of wrapper-->
   </body>
 </html>

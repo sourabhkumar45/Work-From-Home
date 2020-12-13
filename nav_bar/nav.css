@@ -9,6 +9,7 @@
   /* Align items */
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav_name {
   position: relative;
@@ -16,8 +17,9 @@
   bottom: 0%;
   margin: 15px;
   margin-left: 2%;
-  width: 18%;
+  width: 200px;
   height: auto;
+  /* size: 25%; */
 }
 .nav_logout {
   /* Main Purple */
@@ -27,6 +29,7 @@
   justify-content: center;
   margin: 10px;
   width: 10%;
+  height: 40px;
   min-width: 150px;
   margin-right: 5%;
   /* height: 30px; */
@@ -44,4 +47,9 @@
   text-align: center;
   letter-spacing: -0.015em;
   color: #ffffff;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
