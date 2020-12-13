@@ -25,12 +25,19 @@
 
   color: #000000;
 }
+.timer_container {
+  /* border: 1px solid black; */
+  display: flex;
+  width: 30%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+
+  /* flex: 1; */
+}
 .header_timer {
-  background: #000000;
   border-radius: 6px;
   height: 50%;
-  width: 10%;
-  margin-right: 30px;
   padding: 10px;
 
   font-family: Montserrat;
@@ -46,6 +53,14 @@
 
   color: #ffffff;
   cursor: pointer;
+}
+#header_timer {
+  flex: 0.5;
+  background: #000000;
+  margin-left: 10px;
+}
+#header_set_timer {
+  background: #666464;
 }
 .main_timer {
   margin-top: 15px;
