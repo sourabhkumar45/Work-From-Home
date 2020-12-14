@@ -4,6 +4,12 @@ Our team was determined to challenge a major problem of COVID-19, which is lack 
 # What it does
 Our platform allows users to keep track of their work hours, tasks, and schedule reminders to take breaks throughout the day. Home Savvy provides breaks from one's work routine that can easily be scheduled with a click of a button. Users can set breaks for just about anything. Whether that be virtual “water cooler” breaks with your coworkers, petting your dog for 3 minutes or even just a reminder to go eat lunch somewhere other than in front of your computer, Home Savvy encourages you to do things that will improve your mental health and make it easier for you to adjust. 
 
+# Roles
+Design, Branding & Pitch - [Michelle Wong] (https://github.com/rippedstrings)
+Front End - [Tri Truong] (https://github.com/truongductri01)
+Login Page Front End - [Devanshi Adhikari] ()
+Backend - Sourabh Kumar & Sandeep Mahto
+
 # How we built it
 We built it using plain HTML/CSS and Javascript.
 
